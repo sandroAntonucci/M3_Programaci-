@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\argo\\.nuget\\packages\\": {}
+    "C:\\Users\\tboi5\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SandroA\\M4\\UF 1\\Pràctica\\M3_Programaci-\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre.csproj",
+      "projectUniqueName": "C:\\Users\\tboi5\\Documents\\GitHub\\M3_Programaci-\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre.csproj",
       "projectName": "Joc de Batalla Herois vs Monstre",
-      "projectPath": "D:\\SandroA\\M4\\UF 1\\Pràctica\\M3_Programaci-\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre.csproj",
-      "packagesPath": "C:\\Users\\argo\\.nuget\\packages\\",
-      "outputPath": "D:\\SandroA\\M4\\UF 1\\Pràctica\\M3_Programaci-\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre\\obj\\",
+      "projectPath": "C:\\Users\\tboi5\\Documents\\GitHub\\M3_Programaci-\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre.csproj",
+      "packagesPath": "C:\\Users\\tboi5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tboi5\\Documents\\GitHub\\M3_Programaci-\\Joc de Batalla Herois vs Monstre\\Joc de Batalla Herois vs Monstre\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\argo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tboi5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,3 +13,17 @@
 /Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.pdb
 /Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.genruntimeconfig.cache
 /Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/ref/Joc de Batalla Herois vs Monstre.dll
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\bin\Debug\net7.0\Joc de Batalla Herois vs Monstre.exe
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\bin\Debug\net7.0\Joc de Batalla Herois vs Monstre.deps.json
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\bin\Debug\net7.0\Joc de Batalla Herois vs Monstre.runtimeconfig.json
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\bin\Debug\net7.0\Joc de Batalla Herois vs Monstre.dll
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\bin\Debug\net7.0\Joc de Batalla Herois vs Monstre.pdb
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\Joc de Batalla Herois vs Monstre.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\Joc de Batalla Herois vs Monstre.AssemblyInfoInputs.cache
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\Joc de Batalla Herois vs Monstre.AssemblyInfo.cs
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\Joc de Batalla Herois vs Monstre.csproj.CoreCompileInputs.cache
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\Joc de Batalla Herois vs Monstre.dll
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\refint\Joc de Batalla Herois vs Monstre.dll
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\Joc de Batalla Herois vs Monstre.pdb
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\Joc de Batalla Herois vs Monstre.genruntimeconfig.cache
+C:\Users\tboi5\Documents\GitHub\M3_Programaci-\Joc de Batalla Herois vs Monstre\Joc de Batalla Herois vs Monstre\obj\Debug\net7.0\ref\Joc de Batalla Herois vs Monstre.dll
