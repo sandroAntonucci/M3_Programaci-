@@ -1,0 +1,15 @@
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/bin/Debug/net7.0/Joc de Batalla Herois vs Monstre
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/bin/Debug/net7.0/Joc de Batalla Herois vs Monstre.deps.json
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/bin/Debug/net7.0/Joc de Batalla Herois vs Monstre.runtimeconfig.json
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/bin/Debug/net7.0/Joc de Batalla Herois vs Monstre.dll
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/bin/Debug/net7.0/Joc de Batalla Herois vs Monstre.pdb
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.csproj.AssemblyReference.cache
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.AssemblyInfoInputs.cache
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.AssemblyInfo.cs
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.csproj.CoreCompileInputs.cache
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.dll
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/refint/Joc de Batalla Herois vs Monstre.dll
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.pdb
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/Joc de Batalla Herois vs Monstre.genruntimeconfig.cache
+/Users/sandro/Desktop/ITB/M5/PR1/Joc de Batalla Herois vs Monstre/Joc de Batalla Herois vs Monstre/obj/Debug/net7.0/ref/Joc de Batalla Herois vs Monstre.dll
