@@ -4,7 +4,7 @@ namespace GameProject
 {
 
     class AntonucciSandroCode
-    { 
+    {
 
         static void Main()
         {
@@ -39,10 +39,10 @@ namespace GameProject
 
             int startGame, menuTries, statsTries = 3, characterTries = 3;
 
-            int archerHP = 0, archerDMG = 0, archerReduct = 0;
-            int barbarianHP = 0, barbarianDMG = 0, barbarianReduct = 0;
-            int mageHP = 0, mageDMG = 0, mageReduct = 0;
-            int druidHP = 0, druidDMG = 0, druidReduct = 0;
+            double archerHP = 0, archerDMG = 0, archerReduct = 0;
+            double barbarianHP = 0, barbarianDMG = 0, barbarianReduct = 0;
+            double mageHP = 0, mageDMG = 0, mageReduct = 0;
+            double druidHP = 0, druidDMG = 0, druidReduct = 0;
 
             bool exitGame = false, archerCompleted = false;
 
@@ -73,7 +73,7 @@ namespace GameProject
                 } while (startGame != One && startGame != Two && menuTries > Zero);
 
 
-                if(menuTries == Zero)
+                if (menuTries == Zero)
                 {
                     Console.WriteLine(MsgOutOfTries);
                     startGame = Two;
@@ -92,7 +92,7 @@ namespace GameProject
                         characterTries = 3;
                         archerCompleted = false;
 
-                        while(characterTries > 0 && !(archerCompleted))
+                        while (characterTries > 0 && !(archerCompleted))
                         {
 
                             statsTries = 3;
@@ -100,10 +100,12 @@ namespace GameProject
                             archerDMG = 0;
                             archerReduct = 0;
 
+                            // Cada while comprova si el stat està dins del rang i si tens intents, si no, et resta un intent i torna a demanar stat
+
                             while ((archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP) && statsTries > 0)
                             {
                                 Console.Write(MsgArcherHP);
-                                archerHP = Convert.ToInt32(Console.ReadLine());
+                                archerHP = Convert.ToDouble(Console.ReadLine());
 
                                 if (archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP)
                                 {
@@ -115,7 +117,7 @@ namespace GameProject
                             while ((archerDMG < ArcherMinRangeDMG || archerDMG > ArcherMaxRangeDMG) && statsTries > 0)
                             {
                                 Console.Write(MsgArcherDMG);
-                                archerDMG = Convert.ToInt32(Console.ReadLine());
+                                archerDMG = Convert.ToDouble(Console.ReadLine());
 
                                 if (archerDMG < ArcherMinRangeDMG || archerDMG > ArcherMaxRangeDMG)
                                 {
@@ -127,7 +129,7 @@ namespace GameProject
                             while ((archerReduct < ArcherMinRangeReduct || archerReduct > ArcherMaxRangeReduct) && statsTries > 0)
                             {
                                 Console.Write(MsgArcherReduct);
-                                archerReduct = Convert.ToInt32(Console.ReadLine());
+                                archerReduct = Convert.ToDouble(Console.ReadLine());
 
                                 if (archerReduct < ArcherMinRangeReduct || archerReduct > ArcherMaxRangeReduct)
                                 {
@@ -136,7 +138,8 @@ namespace GameProject
                                 }
                             }
 
-                            if(!((archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP) && (archerDMG < ArcherMinRangeDMG || archerDMG > ArcherMaxRangeDMG) && (archerReduct < ArcherMinRangeReduct || archerReduct > ArcherMaxRangeReduct))){
+                            if (!((archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP) && (archerDMG < ArcherMinRangeDMG || archerDMG > ArcherMaxRangeDMG) && (archerReduct < ArcherMinRangeReduct || archerReduct > ArcherMaxRangeReduct)))
+                            {
 
                                 archerCompleted = true;
 
@@ -148,7 +151,67 @@ namespace GameProject
                             }
                         }
 
-                        if(characterTries == 0)
+                        //Bàrbar
+                        archerCompleted = false;
+
+                        while (characterTries > 0 && !(archerCompleted))
+                        {
+
+                            statsTries = 3;
+                            archerHP = 0;
+                            archerDMG = 0;
+                            archerReduct = 0;
+
+                            while ((archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP) && statsTries > 0)
+                            {
+                                Console.Write(MsgArcherHP);
+                                archerHP = Convert.ToDouble(Console.ReadLine());
+
+                                if (archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP)
+                                {
+                                    Console.WriteLine(MsgInputNotValid);
+                                    statsTries--;
+                                }
+                            }
+
+                            while ((archerDMG < ArcherMinRangeDMG || archerDMG > ArcherMaxRangeDMG) && statsTries > 0)
+                            {
+                                Console.Write(MsgArcherDMG);
+                                archerDMG = Convert.ToDouble(Console.ReadLine());
+
+                                if (archerDMG < ArcherMinRangeDMG || archerDMG > ArcherMaxRangeDMG)
+                                {
+                                    Console.WriteLine(MsgInputNotValid);
+                                    statsTries--;
+                                }
+                            }
+
+                            while ((archerReduct < ArcherMinRangeReduct || archerReduct > ArcherMaxRangeReduct) && statsTries > 0)
+                            {
+                                Console.Write(MsgArcherReduct);
+                                archerReduct = Convert.ToDouble(Console.ReadLine());
+
+                                if (archerReduct < ArcherMinRangeReduct || archerReduct > ArcherMaxRangeReduct)
+                                {
+                                    Console.WriteLine(MsgInputNotValid);
+                                    statsTries--;
+                                }
+                            }
+
+                            if (!((archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP) && (archerDMG < ArcherMinRangeDMG || archerDMG > ArcherMaxRangeDMG) && (archerReduct < ArcherMinRangeReduct || archerReduct > ArcherMaxRangeReduct)))
+                            {
+
+                                archerCompleted = true;
+
+                            }
+                            else
+                            {
+                                Console.WriteLine(MsgOutOfTriesStats);
+                                characterTries--;
+                            }
+                        }
+
+                        if (characterTries == 0)
                         {
                             Console.WriteLine(MsgOutOfTriesCharacters);
                         }
@@ -184,7 +247,7 @@ namespace GameProject
                 }
 
             }
-          
+
         }
 
     }
