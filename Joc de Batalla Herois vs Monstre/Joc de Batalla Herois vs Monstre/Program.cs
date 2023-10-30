@@ -3,6 +3,8 @@
 namespace GameProject
 {
 
+    //hola
+
     class AntonucciSandroCode
     {
 
@@ -11,6 +13,7 @@ namespace GameProject
 
             const int Zero = 0, One = 1, Two = 2, Three = 3;
             const int ArcherMinRangeHP = 1500, ArcherMaxRangeHP = 2000, ArcherMinRangeDMG = 180, ArcherMaxRangeDMG = 300, ArcherMinRangeReduct = 25, ArcherMaxRangeReduct = 40;
+            const int BarbarianMinRangeHP = 1500, BarbarianMaxRangeHP = 2000, BarbarianMinRangeDMG = 180, BarbarianMaxRangeDMG = 300, BarbarianMinRangeReduct = 25, BarbarianMaxRangeReduct = 40;
 
             const string MsgAction = "Introdueix la teva acció: ";
             const string MsgInputNotValid = "Aquesta entrada no és vàlida.";
@@ -44,7 +47,7 @@ namespace GameProject
             double mageHP = 0, mageDMG = 0, mageReduct = 0;
             double druidHP = 0, druidDMG = 0, druidReduct = 0;
 
-            bool exitGame = false, archerCompleted = false;
+            bool exitGame = false, archerCompleted = false, barbarianCompleted = false;
 
             while (!(exitGame))         //Joc interminable mentre el jugador no vulgui sortir.
             {
@@ -152,17 +155,17 @@ namespace GameProject
                         }
 
                         //Bàrbar
-                        archerCompleted = false;
+                        barbarianCompleted = false;
 
-                        while (characterTries > 0 && !(archerCompleted))
+                        while (characterTries > 0 && !(barbarianCompleted))
                         {
 
                             statsTries = 3;
-                            archerHP = 0;
-                            archerDMG = 0;
-                            archerReduct = 0;
+                            barbarianHP = 0;
+                            barbarianDMG = 0;
+                            barbarianReduct = 0;
 
-                            while ((archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP) && statsTries > 0)
+                            while ((barbarianHP < BarbarianMinRangeHP || archerHP > ArcherMaxRangeHP) && statsTries > 0)
                             {
                                 Console.Write(MsgArcherHP);
                                 archerHP = Convert.ToDouble(Console.ReadLine());
