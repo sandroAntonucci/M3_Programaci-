@@ -13,7 +13,9 @@ namespace GameProject
 
             const int Zero = 0, One = 1, Two = 2, Three = 3;
             const int ArcherMinRangeHP = 1500, ArcherMaxRangeHP = 2000, ArcherMinRangeDMG = 180, ArcherMaxRangeDMG = 300, ArcherMinRangeReduct = 25, ArcherMaxRangeReduct = 40;
-            const int BarbarianMinRangeHP = 1500, BarbarianMaxRangeHP = 2000, BarbarianMinRangeDMG = 180, BarbarianMaxRangeDMG = 300, BarbarianMinRangeReduct = 25, BarbarianMaxRangeReduct = 40;
+            const int BarbarianMinRangeHP = 3000, BarbarianMaxRangeHP = 3750, BarbarianMinRangeDMG = 150, BarbarianMaxRangeDMG = 250, BarbarianMinRangeReduct = 35, BarbarianMaxRangeReduct = 45;
+            const int MageMinRangeHP = 1000, MageMaxRangeHP = 1500, MageMinRangeDMG = 300, MageMaxRangeDMG = 350, MageMinRangeReduct = 20, MageMaxRangeReduct = 35;
+            const int DruidMinRangeHP = 2000, DruidMaxRangeHP = 2500, DruidMinRangeDMG = 70, DruidMaxRangeDMG = 120, DruidMinRangeReduct = 25, DruidMaxRangeReduct = 40;
 
             const string MsgAction = "Introdueix la teva acció: ";
             const string MsgInputNotValid = "Aquesta entrada no és vàlida.";
@@ -47,7 +49,7 @@ namespace GameProject
             double mageHP = 0, mageDMG = 0, mageReduct = 0;
             double druidHP = 0, druidDMG = 0, druidReduct = 0;
 
-            bool exitGame = false, archerCompleted = false, barbarianCompleted = false;
+            bool exitGame = false, archerCompleted = false, barbarianCompleted = false, mageCompleted = false, druidCompleted = false;
 
             while (!(exitGame))         //Joc interminable mentre el jugador no vulgui sortir.
             {
@@ -165,9 +167,9 @@ namespace GameProject
                             barbarianDMG = 0;
                             barbarianReduct = 0;
 
-                            while ((barbarianHP < BarbarianMinRangeHP || archerHP > ArcherMaxRangeHP) && statsTries > 0)
+                            while ((barbarianHP < BarbarianMinRangeHP || barbarianHP > BarbarianMaxRangeHP) && statsTries > 0)
                             {
-                                Console.Write(MsgArcherHP);
+                                Console.Write(MsgBarbarianHP);
                                 archerHP = Convert.ToDouble(Console.ReadLine());
 
                                 if (archerHP < ArcherMinRangeHP || archerHP > ArcherMaxRangeHP)
