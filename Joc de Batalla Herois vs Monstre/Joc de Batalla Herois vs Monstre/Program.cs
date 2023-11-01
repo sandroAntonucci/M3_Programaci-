@@ -11,7 +11,7 @@ namespace GameProject
         static void Main()
         {
 
-            const int Zero = 0, One = 1, Two = 2, Three = 3;
+            const int Zero = 0, One = 1, Two = 2, Three = 3, Percent = 100;
             const int ArcherMinRangeHP = 1500, ArcherMaxRangeHP = 2000, ArcherMinRangeDMG = 180, ArcherMaxRangeDMG = 300, ArcherMinRangeReduct = 25, ArcherMaxRangeReduct = 40;
             const int BarbarianMinRangeHP = 3000, BarbarianMaxRangeHP = 3750, BarbarianMinRangeDMG = 150, BarbarianMaxRangeDMG = 250, BarbarianMinRangeReduct = 35, BarbarianMaxRangeReduct = 45;
             const int MageMinRangeHP = 1000, MageMaxRangeHP = 1500, MageMinRangeDMG = 300, MageMaxRangeDMG = 350, MageMinRangeReduct = 20, MageMaxRangeReduct = 35;
@@ -22,6 +22,8 @@ namespace GameProject
             const string MsgCharacterActions = "\n1. Atacar\n2. Protegir-se\n3. Habilitat especial";
             const string MsgInputNotValid = "Aquesta entrada no és vàlida.";
             const string MsgOutOfTries = "S'han acabat els intents.";
+            const string MsgProtect = " es protegeix del monstre i duplica la seva reducció de dany pel pròxim atac.";
+            const string MsgCooldown = "L'habilitat especial encara té temps d'espera. Falten ";
             const string MsgPlay = "\n1. Iniciar una nova batalla";
             const string MsgQuit = "2. Sortir\n";
 
@@ -32,11 +34,14 @@ namespace GameProject
             const string MsgArcherHP = "Introdueix la vida de l'arquera (entre 1500 i 2000): ";
             const string MsgArcherDMG = "Introdueix l'atac de l'arquera (entre 180 i 300): ";
             const string MsgArcherReduct = "Introdueix la reducció de dany de l'arquera (entre 25% i 40%): ";
+            const string MsgArcherSpecial = "L'arquera activa la seva habilitat especial i el monstre no pot atacar durant dos torns.";
 
             const string MsgBarbarianName = "Bàrbar";
             const string MsgBarbarianHP = "Introdueix la vida del bàrbar (entre 3000 i 3750): ";
             const string MsgBarbarianDMG = "Introdueix l'atac del bàrbar (entre 150 i 250): ";
             const string MsgBarbarianReduct = "Introdueix la reducció de dany del bàrbar (entre 35% i 45%): ";
+            const string MsgBarbarianSpecial = "El bàrbar activa la seva habilitat especial i augmenta la seva defensa al 100% durant 3 torns.";
+            const string MsgBarbarianMaxReduct = "La reducció de dany del bàrbar ja està al 100%";
 
             const string MsgMageName = "Maga";
             const string MsgMageHP = "Introdueix la vida del mag (entre 1000 i 1500): ";
@@ -52,21 +57,23 @@ namespace GameProject
             const string MsgMonsterHP = "Introdueix la vida del monstre (entre 9000 i 12000): ";
             const string MsgMonsterDMG = "Introdueix l'atac del monstre (entre 250 i 400): ";
             const string MsgMonsterReduct = "Introdueix la reducció de dany del monstre (entre 20% i 30%): ";
+            const string MsgMonsterAttack = "El monstre ataca a tots els herois: "; 
+            const string MsgMonsterCantAttack = "El monstre està atordit i no pot atacar.";
 
             const string MsgBattle = "Comença la batalla!";
             const string MsgTurn = "Torn ";
 
             int startGame, menuTries, statsTries = 3, characterTries = 3, turnTries = 3, actionChosen = 0, turn = 1;
 
-            double archerHP = 0, archerDMG = 0, archerReduct = 0;
-            double barbarianHP = 0, barbarianDMG = 0, barbarianReduct = 0;
-            double mageHP = 0, mageDMG = 0, mageReduct = 0;
-            double druidHP = 0, druidDMG = 0, druidReduct = 0;
-            double monsterHP = 0, monsterDMG = 0, monsterReduct = 0;
+            double archerHP = 1500, archerDMG = 180, archerReduct = 25, currentArcherReduct = 0, archerSpecialCooldown = 0;
+            double barbarianHP = 3000, barbarianDMG = 150, barbarianReduct = 35, currentBarbarianReduct = 0, barbarianSpecialCooldown = 0, barbarianReductSpecialTurns = 0;
+            double mageHP = 1000, mageDMG = 300, mageReduct = 20, currentMageReduct = 0, mageSpecialCooldown = 0;
+            double druidHP = 2000, druidDMG = 70, druidReduct = 25, currentDruidReduct = 0, druidSpecialCooldown = 0;
+            double monsterHP = 9000, monsterDMG = 250, monsterReduct = 20, monsterStun = 0;
 
         
 
-            bool exitGame = false, archerCompleted = false, barbarianCompleted = false, mageCompleted = false, druidCompleted = false, monsterCompleted = false;
+            bool exitGame = false, archerCompleted = false, barbarianCompleted = false, mageCompleted = false, druidCompleted = false, monsterCompleted = false, turnEnded = false;
 
             while (!(exitGame))         //Joc interminable mentre el jugador no vulgui sortir.
             {
@@ -112,7 +119,7 @@ namespace GameProject
                         // Arquera
 
                         characterTries = 3;
-                        archerCompleted = false;
+                        archerCompleted = true;
 
                         while (characterTries > 0 && !(archerCompleted))
                         {
@@ -178,7 +185,7 @@ namespace GameProject
                         }
 
                         //Bàrbar
-                        barbarianCompleted = false;
+                        barbarianCompleted = true;
 
                         while (characterTries > 0 && !(barbarianCompleted))
                         {
@@ -242,7 +249,7 @@ namespace GameProject
                         }
 
                         //Maga
-                        mageCompleted = false;
+                        mageCompleted = true;
 
                         while (characterTries > 0 && !(mageCompleted))
                         {
@@ -306,7 +313,7 @@ namespace GameProject
                         }
 
                         //Druida
-                        druidCompleted = false;
+                        druidCompleted = true;
 
                         while (characterTries > 0 && !(druidCompleted))
                         {
@@ -370,7 +377,7 @@ namespace GameProject
                         }
 
                         //Monstre
-                        monsterCompleted = false;
+                        monsterCompleted = true;
 
                         while (characterTries > 0 && !(monsterCompleted))
                         {
@@ -440,7 +447,7 @@ namespace GameProject
                             break;
                         }
 
-                        string MsgArcherAttack = "Arquera ataca a Monstre amb " + archerDMG + " de dany. El monstre es defensa i rep només " + (archerDMG * (barbarianReduct / 100)) + " de dany. Vida restant del Monstre: " + monsterHP;
+                       
 
 
                         // Joc
@@ -448,18 +455,24 @@ namespace GameProject
                         Console.WriteLine(MsgBattle);
 
                         turn = 1;
+                        turnTries = 3;
 
-                        while((archerHP > 0 || barbarianHP > 0 || mageHP > 0 || druidHP > 0) && monsterHP > 0 && turnTries > 0)
-                        {   
-                            
+                        while ((archerHP > 0 || barbarianHP > 0 || mageHP > 0 || druidHP > 0) && monsterHP > 0 && turnTries > 0)
+                        {
+
                             Console.WriteLine(MsgTurn + turn);
 
+                            archerSpecialCooldown--;
+                            barbarianSpecialCooldown--;
+                            barbarianReductSpecialTurns--;
+
                             // Torn Arquera
-                            while(turnTries > 0)
+                            while(turnTries > 0 && turnEnded == false)
                             {
                                 Console.WriteLine(MsgArcherName + " - " + MsgAction + MsgCharacterActions);
                                 actionChosen = Convert.ToInt32(Console.ReadLine());
 
+                                // Si la entrada no es vàlida, es treu un intent i es torna a executar el while
                                 if(actionChosen < 1 || actionChosen > 3)
                                 {
                                     turnTries--;
@@ -467,18 +480,150 @@ namespace GameProject
                                 }
                                 else
                                 {
+                                    // Switch per a executar l'acció escollida pel jugador
                                     switch (actionChosen)
                                     {
+
+                                        // Acció d'atacar
                                         case 1:
-                                            monsterHP -= archerDMG * (barbarianReduct / 100);
-                                            Console.WriteLine(MsgArcherName + " ataca a " + MsgMonsterName + " amb " + archerDMG + " de dany. El monstre es defensa i rep només " + (archerDMG - archerDMG*(barbarianReduct / 100)) + " de dany. Vida restant del Monstre: " + monsterHP);
+                                            monsterHP -= archerDMG * ((Percent - monsterReduct) / 100);
+                                            Console.WriteLine(MsgArcherName + " ataca a " + MsgMonsterName + " amb " + archerDMG + " de dany. El monstre es defensa i rep només " + (archerDMG * ((Percent - monsterReduct) / 100)) + " de dany. Vida restant del Monstre: " + monsterHP);
+                                            currentArcherReduct = archerReduct;
+                                            turnEnded = true;
                                             break;
+
+                                        // Acció de protegir-se
+                                        case 2:
+                                            Console.WriteLine("La " + MsgArcherName + MsgProtect);
+                                            currentArcherReduct = archerReduct * 2;
+                                            turnEnded = true;
+                                            break;
+
+                                        // Acció d'habilitat especial. Si te cooldown, torna a demanar un valor.
+                                        case 3:
+
+                                            // Comprova si la pot utilitzar
+                                            if(archerSpecialCooldown > 0)
+                                            {
+                                                Console.WriteLine(MsgCooldown + archerSpecialCooldown + " torns per poder utilitzar-la.");
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine(MsgArcherSpecial);
+                                                currentArcherReduct = archerReduct;
+                                                archerSpecialCooldown = 5;
+                                                monsterStun = 2;
+                                                turnEnded = true;
+                                                break;
+                                            }
                                     }
                                 }
+                            }
+
+                            turnEnded = false;
+
+                            // Torn Bàrbar
+                            while (turnTries > 0 && turnEnded == false)
+                            {
+                                Console.WriteLine(MsgBarbarianName + " - " + MsgAction + MsgCharacterActions);
+                                actionChosen = Convert.ToInt32(Console.ReadLine());
+
+                                // Si la entrada no es vàlida, es treu un intent i es torna a executar el while
+                                if (actionChosen < 1 || actionChosen > 3)
+                                {
+                                    turnTries--;
+                                    Console.WriteLine(MsgInputNotValid);
+                                }
+                                else
+                                {
+                                    // Switch per a executar l'acció escollida pel jugador
+                                    switch (actionChosen)
+                                    {
+
+                                        // Acció d'atacar
+                                        case 1:
+                                            monsterHP -= barbarianDMG * ((Percent - monsterReduct) / 100);
+                                            Console.WriteLine(MsgBarbarianName + " ataca a " + MsgMonsterName + " amb " + barbarianDMG + " de dany. El monstre es defensa i rep només " + (barbarianDMG * ((Percent - monsterReduct) / 100)) + " de dany. Vida restant del Monstre: " + monsterHP);
+                                            
+                                            if(barbarianSpecialCooldown <= 0)
+                                            {
+                                                currentBarbarianReduct = barbarianReduct;
+                                            }
+
+                                            turnEnded = true;
+                                            break;
+
+                                        // Acció de protegir-se
+                                        case 2:
+
+                                            if(barbarianSpecialCooldown > 0)
+                                            {
+                                                Console.WriteLine(MsgBarbarianMaxReduct);
+                                               
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("El " + MsgBarbarianName + MsgProtect);
+                                                currentBarbarianReduct = barbarianReduct * 2;
+                                                turnEnded = true;
+                                            }
+
+                                            break;
+
+                                        // Acció d'habilitat especial. Si te cooldown, torna a demanar un valor.
+                                        case 3:
+
+                                            // Comprova si la pot utilitzar
+                                            if (barbarianSpecialCooldown > 0)
+                                            {
+                                                Console.WriteLine(MsgCooldown + barbarianSpecialCooldown + " torns per poder utilitzar-la.");
+                                                break;
+                                            }
+                                            // Defensa al 100% si no té cooldown
+                                            else
+                                            {
+                                                Console.WriteLine(MsgBarbarianSpecial);
+                                                currentBarbarianReduct = Percent;
+                                                barbarianSpecialCooldown = 5;
+                                                barbarianReductSpecialTurns = 3;
+                                                turnEnded = true;
+                                                break;
+                                            }
+                                    }
+                                }
+                            }
+
+                            turnEnded = false;
+
+                            // Torn monstre
+
+                            // Comprovem si pot atacar o no depenent de si s'ha activat l'habilitat de l'arquera
+                            if (monsterStun > 0)
+                            {
+                                Console.WriteLine(MsgMonsterCantAttack);
+                                monsterStun--;
+                            }
+                            else
+                            {
+                                Console.WriteLine(MsgMonsterAttack);
+                                
+                                // Ataca a l'arquera
+                                archerHP -= monsterDMG * ((Percent - currentArcherReduct) / 100);
+                                Console.WriteLine(MsgMonsterName + " ataca a " + MsgArcherName + " amb " + monsterDMG + " de dany. L'arquera es defensa i rep només " + (monsterDMG * ((Percent - currentArcherReduct) / 100)) + " de dany. Vida restant de l'Arquera: " + archerHP);
+
+                                // Ataca al bàrbar
+                                barbarianHP -= monsterDMG * ((Percent - currentBarbarianReduct) / 100);
+                                Console.WriteLine(MsgMonsterName + " ataca a " + MsgBarbarianName + " amb " + monsterDMG + " de dany. L'arquera es defensa i rep només " + (monsterDMG * ((Percent - currentBarbarianReduct) / 100)) + " de dany. Vida restant del bàrbar: " + barbarianHP);
+
 
                             }
 
+                            turn++;
+
                         }
+
+
 
 
 
