@@ -3,8 +3,6 @@
 namespace GameProject
 {
 
-    //hola
-
     class AntonucciSandroCode
     {
 
