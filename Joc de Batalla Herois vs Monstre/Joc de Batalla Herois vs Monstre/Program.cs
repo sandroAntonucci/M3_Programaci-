@@ -19,7 +19,7 @@ namespace GameProject
             const int MonsterMinRangeHP = 9000, MonsterMaxRangeHP = 12000, MonsterMinRangeDMG = 250, MonsterMaxRangeDMG = 400, MonsterMinRangeReduct = 20, MonsterMaxRangeReduct = 30;
 
             const string MsgAction = " · Introdueix la teva acció: ";
-            const string MsgCharacterActions = "\n  1.- Atacar\n  2.- Protegir-se\n  3. Habilitat especial\n\n";
+            const string MsgCharacterActions = "\n  1.- Atacar\n  2.- Protegir-se\n  3.- Habilitat especial\n\n";
             const string MsgInputNotValid = "\n - Aquesta entrada no és vàlida.\n\n";
             const string MsgOutOfTries = "S'han acabat els intents.";
             const string MsgProtect = " es protegeix del monstre i duplica la seva reducció de dany pel pròxim atac.";
@@ -560,7 +560,7 @@ namespace GameProject
                                         // Acció d'atacar
                                         case 1:
                                             monsterHP -= archerDMG * ((Percent - monsterReduct) / 100);
-                                            Console.Write("\n - " + MsgArcherName + " ataca a " + MsgMonsterName + " amb " + archerDMG + " de dany. El monstre es defensa i rep només " + (archerDMG * ((Percent - monsterReduct) / 100)) + " de dany.");
+                                            Console.WriteLine("\n - " + MsgArcherName + " ataca a " + MsgMonsterName + " amb " + archerDMG + " de dany. El monstre es defensa i rep només " + (archerDMG * ((Percent - monsterReduct) / 100)) + " de dany.");
                                             Console.ReadKey();
                                             Console.WriteLine("\n - Monstre: " + monsterHP + " HP");
                                             currentArcherReduct = archerReduct;
